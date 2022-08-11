@@ -14,13 +14,18 @@ ul{
     grid-template-columns: 1fr 4fr;
 }
 
+p {
+    color: grey;
+}
+
 
 /*--------------header section---------*/
 .header{
     grid-column: 2/-1;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+    z-index: 1;
 }
 
 .search{
@@ -109,29 +114,35 @@ ul{
 .content{
     display:grid; 
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     background-color: rgb(243, 243, 243);
     padding: 2rem 1rem;
     gap: 2rem;
 }
 
 .projects{
+    grid-row: 1/-1;
+}
 
+.projects h2{
+    margin-bottom: 2rem;
 }
 
 .projects-body{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
     
 }
 
 .card{
-    height: 200px;
+    height: 250px;
+    
     border-left: 8px orange solid;
     border-radius: 8px;
     background-color: white;
     padding:32px 16px;
- 
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);;
 }
 
 .card p{
@@ -142,15 +153,29 @@ ul{
 }
 
 /*-------announcement section----------  */
-.announcements{
-   
+
+
+.announcements > h2{
+   margin-bottom: 2rem;
 }
 .announcements-content{
-    
+    padding: 10%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+}
+
+.announcements p{
+    padding-top: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .announcements hr{
     margin: 16px 0;
+    color: rgba(207, 201, 201, 0.896);
 }
 
 
@@ -159,8 +184,36 @@ ul{
     grid-column: 2/3;
 }
 
+.trending > h2{
+    margin-bottom: 1rem;
+}
+
 .trending-body{
     
     display:grid;
     gap:0.5rem;
+    padding: 10%;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);;
+}
+
+.trending-item{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+   
+}
+
+.trending-item-info{
+    grid-column: 2/3;
+}
+
+.trending h3{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.trending-item img{
+    height:3rem;
 }
